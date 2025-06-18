@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>X Feed Xchange</title>
-	<link rel="stylesheet" href="popup.css">
+  <meta charset="UTF-8" />
+  <title>X Feed Xchange</title>
+  <link rel="stylesheet" href="popup.css" />
 </head>
-
 <body>
-</body>
+  <div class="container">
+    <h1>X Feed Xchange</h1>
 
+    <div class="section">
+      <label for="tokenInput">👤 Paste Friend’s Token</label>
+      <textarea id="tokenInput" placeholder="Paste token here..."></textarea>
+      <button id="useTokenBtn">Use Token</button>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <label>🔐 Share Your Token</label>
+      <button id="getTokenBtn">Copy My Token</button>
+      <p id="copyStatus">Token copied!</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
 </html>
