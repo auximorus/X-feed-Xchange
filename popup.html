@@ -12,25 +12,33 @@
   <div class="container">
     <h1>X Feed Xchange</h1>
 
+    <!-- Input Tokens Section -->
     <div class="section">
-      <label for="tokenInput">👤 Paste Friend’s Token</label>
-      <textarea id="tokenInput" placeholder="Paste token here..."></textarea>
-      <button id="useTokenBtn">Use Token</button>
+      <label for="friendAuthToken">👤 Paste Friend’s Auth Token</label>
+      <textarea id="friendAuthToken" placeholder="Paste auth_token here..."></textarea>
+
+      <label for="friendCSRFToken">🛡 Paste Friend’s CSRF Token</label>
+      <textarea id="friendCSRFToken" placeholder="Paste ct0 token here..."></textarea>
+
+      <button id="useTokenBtn">Load Feed</button>
     </div>
 
     <hr />
 
+    <!-- Copy Auth Token Section -->
     <div class="section">
-      <label>🔐 Share Your Token</label>
+      <label>🔐 Copy Your Auth Token</label>
       <button id="getTokenBtn">Copy My Token</button>
       <p id="copyStatus">Token copied!</p>
     </div>
 
+    <!-- Copy CSRF Token Section -->
     <div class="section">
-      <label>🛡 Copy CSRF Token</label>
+      <label>🛡 Copy Your CSRF Token</label>
       <button id="getCSRFBtn">Copy CSRF Token</button>
       <p id="csrfStatus">CSRF token copied!</p>
     </div>
+  </div>
 </body>
 
 </html>
