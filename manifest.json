@@ -4,16 +4,18 @@
 	"version": "0.0.1",
 	"description": "View another user's X feed with permission.",
 	"icons": {
-		"128": "icon.png"
+		"128": "images/icon.png"
 	},
 	"action": {
 		"default_title": "X Feed Xchange",
 		"default_popup": "popup.html"
 	},
 	"permissions": [
+		"cookies",
 		"storage",
 		"tabs",
-		"scripting"
+		"scripting",
+		"clipboardWrite"
 	],
 	"host_permissions": [
 		"https://x.com/*",
