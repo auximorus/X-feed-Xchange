@@ -115,6 +115,19 @@ hr {
   opacity: 1;
 }
 
+#csrfStatus {
+  font-size: 12.5px;
+  color: #4af98c;
+  text-align: center;
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#csrfStatus.visible {
+  opacity: 1;
+}
+
 @keyframes slideIn {
   0% {
     transform: translateY(10px);
