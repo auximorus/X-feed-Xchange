@@ -27,3 +27,15 @@ function hideSpecificElements() {
     }
   });
 }
+
+
+function observerCallback() {
+  disableAllButtonsAndLinks();
+  hideSpecificElements();
+}
+
+const observer = new MutationObserver(observerCallback);
+observer.observe(document.body, { childList: true, subtree: true });
+
+// Initial run
+observerCallback();
