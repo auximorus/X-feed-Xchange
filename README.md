@@ -28,7 +28,15 @@ Twitter (now X) uses personal signals like follows, likes, and history to create
 ✅ Block all interactions — no retweets, replies, or clicks
 
 ---
+## 🖼️ What It Looks Like
 
+<img src="./screenshots/extension-popup.png" width="400"/>
+<sub>↑ Enter your tokens or a friend's to load the feed</sub>
+
+<img src="./screenshots/read-only-feed.png" width="400"/>
+<sub>↑ View the feed in read-only mode</sub>
+
+---
 
 
 ## 🚀 How to Install and Use
