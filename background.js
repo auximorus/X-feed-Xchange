@@ -24,13 +24,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sameSite: "lax"
     });
 
-    // Step 1: Set readOnlyMode FIRST
+    
     chrome.storage.local.set({ readOnlyMode: true }, () => {
-      // Step 2: Confirm back to popup to open tab
+      
       sendResponse({ success: true });
     });
 
-    // Return true to keep sendResponse async
+    
     return true;
   }
 });
