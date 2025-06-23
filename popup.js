@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 3000);
     });
   });
-  // Load feed with pasted tokens
-  useTokenBtn.addEventListener("click", async () => {
+  // Use friend's tokens and load the read-only feed
+  useTokenBtn.addEventListener("click", () => {
     const auth = document.getElementById("friendAuthToken").value.trim();
     const ct0 = document.getElementById("friendCSRFToken").value.trim();
 
@@ -62,30 +62,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    chrome.cookies.set({
-      url: "https://x.com",
-      name: "auth_token",
-      value: auth,
-      domain: ".x.com",
-      path: "/",
-      secure: true,
-      httpOnly: false,
-      sameSite: "lax"
-    });
-
-    chrome.cookies.set({
-      url: "https://x.com",
-      name: "ct0",
-      value: ct0,
-      domain: ".x.com",
-      path: "/",
-      secure: true,
-      httpOnly: false,
-      sameSite: "lax"
-    });
-
-    // Open the feed tab
-    chrome.tabs.create({ url: "https://x.com/home", active: true });
+    chrome.runtime.sendMessage(
+      {
+        type: "setTokens",
+        authToken: auth,
+        ct0: ct0
+      },
+      (response) => {
+        if (response?.success) {
+          chrome.tabs.create({ url: "https://x.com/home" });
+        } else {
+          alert("Failed to set tokens. Please try again.");
+        }
+      }
+    );
   });
 });
 
