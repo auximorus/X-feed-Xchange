@@ -32,3 +32,22 @@ function observerCallback() {
     chrome.storage.local.remove("readOnlyMode");
   });
 }
+function waitForReadOnlyFlagAndApply() {
+  const maxRetries = 20;
+  let retries = 0;
+
+  const interval = setInterval(() => {
+    chrome.storage.local.get("readOnlyMode", ({ readOnlyMode }) => {
+      if (readOnlyMode) {
+        clearInterval(interval);
+        applyReadOnlyMode();
+      } else if (++retries >= maxRetries) {
+        clearInterval(interval);
+      }
+    });
+  }, 100); // retry every 100ms
+}
+
+window.addEventListener("load", () => {
+  waitForReadOnlyFlagAndApply();
+});
