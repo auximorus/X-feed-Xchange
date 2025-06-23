@@ -30,10 +30,10 @@ Twitter (now X) uses personal signals like follows, likes, and history to create
 ---
 ## 🖼️ What It Looks Like
 
-<img src="./screenshots/extension-popup.png" width="400"/>
+<img src="./images/extension-popup.png" width="400"/>
 <sub>↑ Enter your tokens or a friend's to load the feed</sub>
 
-<img src="./screenshots/read-only-feed.png" width="400"/>
+<img src="./images/read-only-feed.png" width="400"/>
 <sub>↑ View the feed in read-only mode</sub>
 
 ---
