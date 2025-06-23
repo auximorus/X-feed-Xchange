@@ -17,3 +17,18 @@ function applyReadOnlyMode() {
       el.style.opacity = '0.4';
     });
   }
+function observerCallback() {
+    hideElementsCompletely();
+    disableAllInteractions();
+  }
+
+  const observer = new MutationObserver(observerCallback);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  observerCallback();
+
+  // Cleanup on reload/close
+  window.addEventListener("beforeunload", () => {
+    chrome.storage.local.remove("readOnlyMode");
+  });
+}
