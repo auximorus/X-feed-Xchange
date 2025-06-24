@@ -91,9 +91,9 @@ x-feed-xchange/
 ├── popup.html         → Extension interface
 ├── popup.js           → Token copying and setup logic
 ├── content.js         → Applies read-only mode on feed
-├── background.js      → Sets cookies and mode flag
+├── background.js      → Sets cookies and restores the old session
 ├── manifest.json      → Extension config
-├── style.css          → Simple styling
+├── popup.css          → Simple styling of popup
 └── images/icon.png    → Extension icon
 ```
 
