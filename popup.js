@@ -57,10 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const auth = document.getElementById("friendAuthToken").value.trim();
     const ct0 = document.getElementById("friendCSRFToken").value.trim();
 
-    if (!auth || !ct0) {
-      alert("Please enter both tokens.");
+        if (!auth && !ct0) {
+      alert("Please enter both the Auth token and CSRF token.");
+      return;
+    } else if (!auth) {
+      alert("Please enter the Auth token.");
+      return;
+    } else if (!ct0) {
+      alert("Please enter the CSRF token.");
       return;
     }
+
 
     chrome.runtime.sendMessage(
       {
