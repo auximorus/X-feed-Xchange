@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title>X Feed Xchange</title>
   <link rel="stylesheet" href="popup.css" />
   <script src="popup.js" defer></script>
 </head>
-
 <body>
   <div class="container">
-    <h1>X Feed Xchange</h1>
+    <h1>✨ X Feed Xchange</h1>
 
-    <!-- Input Tokens Section -->
+    <!-- Friend's Feed Section -->
     <div class="section">
-      <label for="friendAuthToken">👤 Paste Friend’s Auth Token</label>
+      <h2>View Friend's Feed</h2>
+      <label for="friendAuthToken">👤 Friend’s Auth Token</label>
       <textarea id="friendAuthToken" placeholder="Paste auth_token here..."></textarea>
 
-      <label for="friendCSRFToken">🛡 Paste Friend’s CSRF Token</label>
+      <label for="friendCSRFToken">🛡 Friend’s CSRF Token</label>
       <textarea id="friendCSRFToken" placeholder="Paste ct0 token here..."></textarea>
 
-      <button id="useTokenBtn">Load Feed</button>
+      <button id="useTokenBtn">Load Friend's Feed</button>
     </div>
 
     <hr />
 
-    <!-- Copy Auth Token Section -->
+    <!-- Your Tokens Section -->
     <div class="section">
-      <label>🔐 Copy Your Auth Token</label>
-      <button id="getTokenBtn">Copy My Token</button>
-      <p id="copyStatus">Token copied!</p>
-    </div>
-
-    <!-- Copy CSRF Token Section -->
-    <div class="section">
-      <label>🛡 Copy Your CSRF Token</label>
-      <button id="getCSRFBtn">Copy CSRF Token</button>
-      <p id="csrfStatus">CSRF token copied!</p>
+      <h2>Your Tokens</h2>
+      <div>
+        <label>🔐 Copy Your Auth Token</label>
+        <button id="getTokenBtn">Copy My Token</button>
+        <p id="copyStatus">Token copied!</p>
+      </div>
+      <div style="margin-top:10px;">
+        <label>🛡 Copy Your CSRF Token</label>
+        <button id="getCSRFBtn">Copy CSRF Token</button>
+        <p id="csrfStatus">CSRF token copied!</p>
+      </div>
     </div>
   </div>
 </body>
-
 </html>
