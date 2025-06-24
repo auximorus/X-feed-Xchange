@@ -109,6 +109,10 @@ This extension was built as a **hackathon project** to:
 
 ---
 
+> ⚠️ **Security Reminder:**  
+> Only share your Twitter/X tokens with people you fully trust.  
+> Tokens grant access to your account’s feed and data. Never post them publicly or share with strangers.
+
 ## 👨‍💻 Authors
 
 - **Nilesh**
