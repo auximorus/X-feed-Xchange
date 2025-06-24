@@ -112,5 +112,6 @@ This extension was built as a **hackathon project** to:
 
 - **Nilesh**
 - **Lakshay Panchal**
+- **Tejas**
 
 
