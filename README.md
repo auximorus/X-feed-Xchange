@@ -48,9 +48,10 @@ Twitter (now X) uses personal signals like follows, likes, and history to create
 - Enable **Developer Mode**
 - Click **Load unpacked** → Select this project folder
 
-#### For Firefox:
-- Go to `about:debugging`
-- Click **Load Temporary Add-on**
+#### For Brave:
+- Go to `Brave://extensions`
+- Toggle **Developer Mode**
+- Click on **Load Upacked**
 - Choose the `manifest.json` file in this folder
 
 ---
